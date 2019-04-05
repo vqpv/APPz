@@ -1,0 +1,23 @@
+.main-div {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .mat-card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  mat-card {
+    padding: 70px;
+    border-radius: 10px;
+  }
+
+  .mat-card-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
