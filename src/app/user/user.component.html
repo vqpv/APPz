@@ -1,0 +1,45 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+       <a  mat-button  routerLink="/">Exit</a>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+<mat-drawer-container class="container">
+    <mat-drawer class="test" mode="side" opened>
+        <mat-card>
+            <img src="assets/img/ANKF.PNG">
+        </mat-card>
+        <p>
+        <mat-card>
+            <button mat-raised-button color="primary"  style=" padding: 0 35px;">Check it!</button>
+        </mat-card>
+        </p>
+
+        <p>
+         <mat-card>
+            <span>Status</span>
+        </mat-card>
+        </p>
+
+    </mat-drawer>
+
+    <mat-drawer-content>
+        <mat-toolbar color="grey">
+            <mat-toolbar-row>
+                <span>Cheking</span>
+            </mat-toolbar-row>
+        </mat-toolbar>
+
+        <form class="form">
+            <mat-form-field style="margin-right: 50px;" class="example-full-width">
+                <input type="number" matInput placeholder="Id num:">
+                <mat-icon matSuffix>mode_edit</mat-icon>
+            </mat-form-field> 
+            <button mat-raised-button disabled>Disabled</button>
+        </form>
+
+        
+
+    </mat-drawer-content>
+
+</mat-drawer-container>
