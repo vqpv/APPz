@@ -30,13 +30,14 @@
             </mat-toolbar-row>
         </mat-toolbar>
 
-        <form class="form">
+        <form #z="ngForm" class="form">
             <mat-form-field style="margin-right: 50px;" class="example-full-width">
-                <input type="number" matInput placeholder="Id num:">
+                <input matInput placeholder="Id num:" name="myfield" type="number" minlenght="13" required ngModel>
                 <mat-icon matSuffix>mode_edit</mat-icon>
             </mat-form-field> 
-            <button mat-raised-button disabled>Disabled</button>
+            <button type="submit" mat-raised-button [disabled]="!z.valid">Submit</button>
         </form>
+
 
         
 
