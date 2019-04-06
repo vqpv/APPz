@@ -1,7 +1,7 @@
 <mat-toolbar color="primary">
 
     <mat-toolbar-row>
-       <a  mat-button  routerLink="/">Exit</a>
+       <a  mat-button  routerLink="/">Выход</a>
     </mat-toolbar-row>
 
   </mat-toolbar>
@@ -9,12 +9,12 @@
 <mat-drawer-container class="container">
 
     <mat-drawer class="test" mode="side" opened>
-        <mat-card>
+        <mat-card class="center" >
             <img src="assets/img/ANKF.PNG">
         </mat-card>
         <p>
-        <mat-card>
-            <button mat-raised-button color="primary"  style=" padding: 0 35px;">Check it!</button>
+        <mat-card class="center">
+            <button mat-raised-button color="primary"  style=" padding: 0 35px;">Проверить</button>
         </mat-card>
         </p>
 
@@ -30,18 +30,64 @@
 
         <mat-toolbar style="background: #e0eaf7;">
             <mat-toolbar-row>
-                <span>Cheking</span>
+                <span>Проверка</span>
             </mat-toolbar-row>
         </mat-toolbar>
 
         <form class="form">
-            <mat-form-field style="margin-right: 50px;">
-                <input matInput placeholder="Id num:" name="checkNum" [(ngModel)]="checkNum" (keypress)="keyPress($event)" (keyup)="onVerifyChange($event)" required>
+            <mat-form-field class="width">
+                <input matInput placeholder="Идентификационный номер:" name="checkNum" [(ngModel)]="checkNum" (keypress)="keyPress($event)" (keyup)="onVerifyChange($event)" required>
                 <mat-icon matSuffix>mode_edit</mat-icon>
             </mat-form-field> 
-            <button mat-raised-button [disabled]="checkIsEnabled()">Submit</button>
+            <button mat-raised-button [disabled]="checkIsEnabled()" (click)="ToggleButton()" >Submit</button>
         </form>
-        
+
+        <div class="text-left" *ngIf="showSelected">
+            <p>
+            <mat-card>
+                UID:
+                <br>
+                Ед. изм.:
+                <br>
+                Количество в ед. изм.:
+                <br>
+                Статус:
+            </mat-card>
+            </p>
+
+            <p>
+            <mat-card>
+                Производитель:
+                <br>
+                Наименование продукции:
+                <br>
+                Товарная группа:
+            </mat-card>
+            </p>
+
+             <p>
+            <mat-card>
+                Номер партии:
+            </mat-card>
+            </p>
+
+            <p>
+            <mat-card>
+                Номер паспорта:
+                <br>
+                Номер бланка паспорта качества:
+            </mat-card>
+            </p>
+
+             <p>
+            <mat-card>
+                Дата производства:
+                <br>
+                Срок годности (месяцев):
+            </mat-card>
+            </p>
+        </div>
+
     </mat-drawer-content>
 
 </mat-drawer-container>

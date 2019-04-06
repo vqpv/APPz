@@ -9,16 +9,22 @@
   align-content: center;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  margin-top: 15px;
 }
 .test {
   width: 350px;
 }
 
-mat-card{
+.width {
+  margin-right: 50px;
+  width: 350px;
+}
+
+.center {
   display: flex;
   justify-content: center;
 }
-
 /*
   margin: 10px;
   border: 1px solid #555;

@@ -13,8 +13,9 @@ export class UserComponent implements OnInit {
   constructor() { }
 
   checkNum: string;
-  isenabled: boolean;
-  
+  isEnabled: boolean;
+  showSelected: boolean = false;
+
   keyPress(event: any) {
     const pattern = /[0-9]/;
 
@@ -24,17 +25,21 @@ export class UserComponent implements OnInit {
     }
   }
 
-  onVerifyChange(e) {
+  onVerifyChange(event: any) {
     if (this.checkNum.length == 13 ) {
-        this.isenabled = true;
+        this.isEnabled = true;
     }
     else {
-        this.isenabled = false;
+        this.isEnabled = false;
     }
 }
 checkIsEnabled() {
-  return !this.isenabled;
+  return !this.isEnabled;
 }
+   ToggleButton() {
+      this.showSelected = !this.showSelected;
+   }
+
   ngOnInit() {
   }
 
