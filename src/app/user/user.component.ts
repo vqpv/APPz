@@ -13,6 +13,7 @@ export class UserComponent implements OnInit {
   constructor() { }
 
   checkNum: string;
+  isenabled: boolean;
   
   keyPress(event: any) {
     const pattern = /[0-9]/;
@@ -23,6 +24,17 @@ export class UserComponent implements OnInit {
     }
   }
 
+  onVerifyChange(e) {
+    if (this.checkNum.length == 13 ) {
+        this.isenabled = true;
+    }
+    else {
+        this.isenabled = false;
+    }
+}
+checkIsEnabled() {
+  return !this.isenabled;
+}
   ngOnInit() {
   }
 

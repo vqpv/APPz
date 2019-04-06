@@ -35,11 +35,11 @@
         </mat-toolbar>
 
         <form class="form">
-            <mat-form-field style="margin-right: 50px;" class="example-full-width">
-                <input matInput placeholder="Id num:" name="checkNum" [(ngModel)]="checkNum" (keypress)="keyPress($event)" required>
+            <mat-form-field style="margin-right: 50px;">
+                <input matInput placeholder="Id num:" name="checkNum" [(ngModel)]="checkNum" (keypress)="keyPress($event)" (keyup)="onVerifyChange($event)" required>
                 <mat-icon matSuffix>mode_edit</mat-icon>
             </mat-form-field> 
-            <button type="submit" mat-raised-button [disabled]="checkNum.length < 13">Submit</button>
+            <button mat-raised-button [disabled]="checkIsEnabled()">Submit</button>
         </form>
         
     </mat-drawer-content>
