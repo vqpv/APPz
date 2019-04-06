@@ -34,14 +34,14 @@
             </mat-toolbar-row>
         </mat-toolbar>
 
-        <form #z="ngForm" class="form">
+        <form class="form">
             <mat-form-field style="margin-right: 50px;" class="example-full-width">
-                <input matInput placeholder="Id num:" name="myfield" type="number" minlenght="13" required ngModel>
+                <input matInput placeholder="Id num:" name="checkNum" [(ngModel)]="checkNum" (keypress)="keyPress($event)" required>
                 <mat-icon matSuffix>mode_edit</mat-icon>
             </mat-form-field> 
-            <button type="submit" mat-raised-button [disabled]="!z.valid">Submit</button>
+            <button type="submit" mat-raised-button [disabled]="checkNum.length < 13">Submit</button>
         </form>
-
+        
     </mat-drawer-content>
 
 </mat-drawer-container>
