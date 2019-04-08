@@ -13,7 +13,8 @@
 
   mat-card {
     padding: 70px;
-    border-radius: 10px;
+    border-radius: 15px;
+    background: #e5f3f5;
   }
 
   .mat-card-actions {

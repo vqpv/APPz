@@ -14,13 +14,13 @@
         </mat-card>
         <p>
         <mat-card class="center">
-            <button mat-raised-button color="primary"  style=" padding: 0 35px;">Проверить</button>
+            <button mat-stroked-button style=" padding: 0 35px;">Проверить</button>
         </mat-card>
         </p>
 
         <p>
          <mat-card>
-            <span>Status</span>
+            <span>Status...</span>
         </mat-card>
         </p>
 
@@ -28,7 +28,7 @@
 
     <mat-drawer-content>
 
-        <mat-toolbar style="background: #e0eaf7;">
+        <mat-toolbar style="background: #e5f3f5;">
             <mat-toolbar-row>
                 <span>Проверка</span>
             </mat-toolbar-row>
@@ -39,7 +39,7 @@
                 <input matInput placeholder="Идентификационный номер:" name="checkNum" [(ngModel)]="checkNum" (keypress)="keyPress($event)" (keyup)="onVerifyChange($event)" required>
                 <mat-icon matSuffix>mode_edit</mat-icon>
             </mat-form-field> 
-            <button mat-raised-button [disabled]="checkIsEnabled()" (click)="ToggleButton()" >Submit</button>
+            <button mat-stroked-button color="primary" [disabled]="checkIsEnabled()" (click)="ToggleButton()" >Проверить</button>
         </form>
 
         <div class="text-left" *ngIf="showSelected">
