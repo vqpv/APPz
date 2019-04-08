@@ -1,1 +1,9 @@
 <router-outlet></router-outlet>
+
+login: <input type="text" [(ngModel)]="login">
+password: <input type="text" [(ngModel)]="password">
+<button (click)="postLogin()">Search</button>
+
+<div *ngIf="response">
+    <p> Username: {{response.userName}} </p>
+</div>
